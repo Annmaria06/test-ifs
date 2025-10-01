@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minimal Checklist Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1 class="title">Simple Checklist</h1>
+
+    <form id="addForm" class="add-form" aria-label="Add item">
+      <input id="itemInput" type="text" placeholder="Add a new task..." aria-label="New task">
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="controls">
+      <div class="counts">Total: <span id="total">0</span> • Completed: <span id="done">0</span></div>
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+      </div>
+    </div>
+
+    <ul id="list" class="list" role="list"></ul>
+
+    <div class="footer">
+      <button id="clearCompleted">Clear completed</button>
+      <button id="saveBtn">Save (local)</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
